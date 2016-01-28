@@ -1,0 +1,155 @@
+.page-right {
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 50%;
+	bottom: 0;
+	height: 100vh;
+	overflow-y: scroll;
+	background: #5F8496;
+}
+
+@media screen and (max-width: 64.063em) {
+	.page-right {
+		position: static;
+		width: auto;
+		height: auto;
+		overflow: auto;
+	}
+}
+
+/* Body */
+body,
+input,
+select,
+textarea,
+button {
+	font-family: "Proxima Nova", 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+}
+
+body {
+	background: $footer-bg;
+}
+
+a {
+	color: $bhr-pink;
+	text-decoration: none;
+	font-weight: bold;
+
+	&:hover {
+		color: $bhr-pink-dark;
+		text-decoration: none;
+	}
+}
+
+/* SVG */
+svg {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	fill: currentColor;
+	@include size(16,16);
+	vertical-align: -8%;
+}
+
+/* Box Sizing */
+* {
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-tap-highlight-color: transparent;
+}
+
+/* Text Highlight */
+::selection {
+	color: #FFFFFF;
+	background: $bhr-pink;
+}
+
+/* Global Styles */
+.space {
+	height: 1px;
+}
+
+.hide {
+	position: absolute;
+	top: -9999px;
+	left: -9999px;
+}
+
+.hidden {
+	display: none;
+}
+
+.clear {
+	clear: both;
+}
+
+.floatleft {
+	float: left;
+}
+
+.floatright {
+	float: right;
+}
+
+img.floatleft,
+.img.floatright {
+	position: relative;
+}
+
+.alignleft {
+	text-align: left;
+}
+
+.alignright {
+	text-align: right;
+}
+
+/* Google Map */
+.embed-container,
+.media {
+    @include margin-all(16,0,16,0);
+    position: relative;
+    padding-bottom: 100%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed,
+.media iframe,
+.media object,
+.media embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Media Queries */
+@media all and (min-width: 64.063em) {
+
+	.desktop-clear {
+		clear: both;
+	}
+
+}
+
+@media all and (max-width: 64.063em) {
+
+	/* Tablet Clear */
+	.tablet-clear {
+		clear: both;
+	}
+
+}
+
+@media all and (max-width: 40.063em) {
+	/* Mobile Clear */
+	.mobile-clear {
+		clear: both;
+	}
+}

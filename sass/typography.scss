@@ -1,0 +1,21 @@
+/** Exports to ../css/typography.css **/
+
+/*** Base ***/
+@import "base/_reset";
+
+/*** Mixins ***/
+@import "mixins/_colours";
+@import "mixins/_sprite";
+@import "mixins/_other";
+@import "sections/_content";
+
+body {
+    font-family: "Proxima Nova", 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+    line-height: 1.5;
+    @include padding-all(0,16,0,16);
+}
+
+/* Typography */
+.typography {
+    @include content;
+}

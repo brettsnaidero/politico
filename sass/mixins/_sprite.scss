@@ -1,0 +1,9 @@
+$sprite-size: 298px 148px;
+
+/* Main Sprite */
+@mixin sprite {
+	background-image: url(../images/check.png);
+	background-image: url(../images/check.svg), none;
+	background-repeat: no-repeat;
+    background-size: $sprite-size;
+}

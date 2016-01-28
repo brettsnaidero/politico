@@ -1,0 +1,54 @@
+* {
+  box-sizing: border-box;
+}
+
+.politicians {
+    background: #5F8496;
+}
+
+.container {
+    font-size: 0px;
+}
+
+.mix {
+  display: none;
+  text-align: center;
+  width: 18%;
+  margin: 1em 1%;
+  background-color: #ccc;
+  font-size: 16px;
+}
+
+.houseofreps {
+  background-color: blue;
+  color: white;
+}
+
+.senate {
+  background-color: orange;
+}
+
+.red {
+  background-color: red;
+  color: white;
+}
+
+.controls button {
+    background: #FFFFFF;
+    border: none;
+    color: #000000;
+    padding: .65em;
+    border-radius: 5px;
+}
+
+.controls button.active {
+    background: blue;
+}
+
+input {
+  padding: .5em;
+}
+
+.title {
+  font-weight: 2em;
+}

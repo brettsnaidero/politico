@@ -1,0 +1,62 @@
+{
+  "name": "Politico",
+  "version": "0.0.1",
+  "description": "Educational website about Australian federal politicians",
+  "license": "ISC",
+  "engines": {
+    "node": ">= 0.12",
+    "npm": ">= 2.5"
+  },
+  "scripts": {
+    "start": "ws",
+    "test": "testCommand"
+  },
+  "dependencies": {
+    "babel": "^5.1.11",
+    "babel-runtime": "^5.2.15",
+    "cssnano": "^3.4.0",
+    "es6-promise": "^2.1.1",
+    "flummox": "4.0.0-alpha",
+    "google-map-react": "^0.4.2",
+    "grunt-cssnano": "^2.0.1",
+    "gulp-cssnano": "^2.1.0",
+    "infuse.js": "0.7.4",
+    "loglevel": "^1.2.0",
+    "rc-dialog": "^5.0.3",
+    "react": "^0.13.2",
+    "react-controllables": "^0.6.0",
+    "react-overlay-popup": "^1.1.0",
+    "react-pure-render": "^1.0.2",
+    "react-router": "^0.13.3",
+    "react-slider": "^0.5.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.2.3",
+    "babel-core": "^5.1.11",
+    "babel-eslint": "^4.1.1",
+    "babel-loader": "^5.0.0",
+    "cssnano": "^3.4.0",
+    "grunt": "^0.4.5",
+    "grunt-contrib-concat": "^0.5.1",
+    "grunt-contrib-uglify": "^0.9.1",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-postcss": "^0.7.1",
+    "grunt-sass": "^1.0.0",
+    "grunt-svgstore": "^0.5.0",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-load-plugins": "^1.1.0",
+    "gulp-sass": "^2.1.1",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-util": "^3.0.7",
+    "load-grunt-tasks": "^3.2.0",
+    "local-web-server": "^0.5.20",
+    "matchdep": "^1.0.0",
+    "node-sass": "3.3.3",
+    "pixrem": "^3.0.0",
+    "postcss": "^5.0.14",
+    "time-grunt": "^1.2.1",
+    "webpack": "^1.12.1",
+    "webpack-dev-server": "^1.11.0"
+  }
+}

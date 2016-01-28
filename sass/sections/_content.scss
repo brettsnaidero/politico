@@ -1,0 +1,548 @@
+/* Content */
+@mixin content {
+	&.centertext {
+		text-align: center;
+	}
+
+	hr {
+		border-bottom: 1px solid #475562;
+		border-left: none;
+		border-right: none;
+		border-top: none;
+		@include margin-all(16,0,16,0);
+	}
+
+	a { 
+		color: $bhr-pink;
+		text-decoration: none;
+	}
+
+	.type {
+		border-bottom: 1px solid;
+		display: inline-block;
+		font-size: 0.7em;
+		font-weight: 900;
+		letter-spacing: 1px;
+		margin-bottom: 2em;
+		padding: 0.1em 0;
+		text-align: left;
+		text-transform: uppercase;
+	}
+
+	code {
+		background: #F7F7F7;
+		@include border-radius(4px);
+		border: 1px solid #E0E0E0;
+		font-family: monaco;
+		font-size: 0.65em;
+		font-style: normal;
+		padding: 0.1em 0.4em;
+		white-space: nowrap;
+	}
+
+	p.date {
+		color: transparentize(#475562, 0.6);
+		font-size: 0.8em;
+		margin-bottom: 0.5em;
+	}
+
+	hr {
+		width: 3em;
+	}
+
+	a.read-more {
+		display: inline-block;
+		font-size: 0.8em;
+		font-weight: 700;
+		margin-left: 0.2em;
+		position: relative;
+		text-transform: uppercase;
+
+		span {
+			font-size: 1.7em;
+			position: absolute;
+			right: -10px;
+			top: -2px;
+		}
+	}
+
+	p.author {
+		font-style: italic;
+	}
+
+	&:before,
+	&:after {
+		content: " ";
+		display: table;
+	}
+
+	&:after {
+		clear: both;
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		color:  $bhr-black;
+		@include margin-all(10,0,10,0);
+
+		font-weight: bold;
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+	}
+
+	h1 {
+		@include font-size(32);
+		@include line-height(40);
+	}
+
+	h2 {
+		@include font-size(24);
+		@include line-height(32);
+	}
+
+	h3 {
+		@include font-size(20);
+		@include line-height(28);
+	}
+
+	h4 {
+		@include font-size(18);
+		@include line-height(26);
+	}
+
+	h5 {
+		@include font-size(16);
+		@include line-height(24);
+	}
+
+	h6 {
+		@include font-size(14);
+		@include line-height(22);
+	}
+
+	p {
+		@include font-size(16);
+		@include line-height(24);
+		color: $bhr-black;
+		@include margin-all(10,0,10,0);
+
+		span {
+			font-size: 0.8em;
+			font-weight: 600;
+			text-transform: uppercase;
+		}
+	}
+
+	img {
+		background-color: #EFEFEF;
+		@include margin-all(10,0,10,0);
+		max-width: 100%;
+	}
+
+	img.left,
+	.captionImage.left,
+	img.floatleft {
+		float: left;
+		max-width: 96%;
+		margin: 10px 4% 10px 0;
+		margin: 0.625rem 4% 0.625rem 0;
+	}
+
+	img.right,
+	.captionImage.right,
+	img.floatright {
+		float: right;
+		max-width: 96%;
+		margin: 10px 0 10px 4%;
+		margin: 0.625rem 0 0.625rem 4%;
+	}
+
+	img,
+	img.left,
+	img.right,
+	.captionImage,
+	.captionImage.left,
+	.captionImage.right {
+	}
+
+	.captionImage,
+	.captionImage.left,
+	.captionImage.right {
+		position: relative;
+	}
+
+	.captionImage {
+		&.center {
+			text-align: center;
+			@include margin-all(10,0,10,0);
+
+			img {
+				margin: 0 auto;
+			}
+		}
+		&.left {
+			float: left;
+			max-width: 96%;
+			margin: 10px 4% 10px 0;
+			margin: 0.625rem 4% 0.625rem 0;
+		}
+		&.right {
+			float: right;
+			max-width: 96%;
+			margin: 10px 0 10px 4%;
+			margin: 0.625rem 0 0.625rem 4%;
+		}
+		img {
+			margin: 0;
+			float: none;
+			max-width: 100%;
+			padding: 0;
+			background: none;
+			-webkit-box-shadow: none;
+			-moz-box-shadow: none;
+			-o-box-shadow: none;
+			box-shadow: none;
+		}
+		p {
+			margin: 0;
+		}
+		p.caption {
+			@include font-size(14);
+			font-style: italic;
+			@include padding-all(10,0,0,0);
+			color: #475562;
+		}
+	}
+
+	b,
+	strong {
+		font-weight: bold;
+	}
+
+	i,
+	em {
+		font-style: italic;
+	}
+
+	q,
+	blockquote {
+		@include padding-all(0,20,0,60);
+		@include margin-all(20,0,20,0);
+		font-weight: bold;
+		@include font-size(24);
+		@include line-height(28);
+		color: #999999;
+		position: relative;
+
+		p {
+			@include font-size(24);
+			@include line-height(28);
+			color: #999999;
+		}
+
+		&:before {
+			content: '“';
+			fill: $bhr-pink;
+			color: $bhr-pink;
+			position: absolute;
+			left: 20px;
+			top: 50%;
+			margin-top: -20px;
+			margin-top: calculateRem(-20);
+			@include font-size(64);
+			@include line-height(64);
+		}
+	}
+
+	a,
+	a:link,
+	a:visited {
+		color: darken($bhr-pink,10%);
+        font-weight: 600;
+		text-decoration: none;
+		position: relative;
+	}
+
+	a:hover,
+	a:focus {
+		text-decoration: underline;
+	}
+
+	a:active,
+	a:focus {
+		color: #008ae0;
+		text-decoration: none;
+		outline: none;
+	}
+
+	table {
+		max-width: 100%;
+		@include margin-all(10,0,10,0);
+		color: $bhr-black;
+		line-height: 1.5;
+		border-width: 1px;
+		border-color: $bhr-black;
+		border-collapse: collapse;
+
+		thead td,
+		th {
+			background-color: #F1F1F1;
+			@include padding-all(8,10,8,10);
+			border-width: 1px;
+			border-style: solid;
+			border-color: $bhr-black;
+			text-align: left;
+			font-weight: bold;
+		}
+		td {
+			@include padding-all(8,10,8,10);
+			border-width: 1px;
+			border-style: solid;
+			border-color: $bhr-black;
+		}
+	}
+
+	/* Lists */
+	ul {
+		margin: 0.5em 0em;
+		overflow: hidden;
+
+		li {
+			list-style: none;
+			@include padding-all(0,0,0,32);
+			position: relative;
+
+			&:after {
+				content: '';
+				position: absolute;
+				top: 7px;
+				top: calculateRem(7);
+				left: 12px;
+				height: 8px;
+				width: 8px;
+				border-right: 2px solid $bhr-pink;
+				border-bottom: 2px solid $bhr-pink;
+				-ms-transform: rotate(-45deg);
+				-webkit-transform: rotate(-45deg);
+				transform: rotate(-45deg);
+				pointer-events: none;
+			}
+		}
+	}
+
+	li {
+		color: $bhr-black;
+		@include margin-all(10,0,10,0);
+	}
+
+	ol {
+		list-style: decimal;
+		overflow: hidden;
+
+		li {
+			@include margin-all(10,0,10,32);
+		}
+	}
+
+	ul li p,
+	ol li p {
+	  font-size: 1em;
+	}
+
+	// Bold
+	strong {
+	  font-weight: 700;
+	}
+}
+
+strong {
+  font-weight: 700;
+}
+
+.content {
+    @include content;
+}
+
+.two-columns {
+	column-count: 2;
+	-webkit-column-count: 2;
+	column-gap: 32px;
+	-webkit-column-gap: 32px;
+
+	p {
+		color: #475562;
+		@include font-size(20);
+		@include line-height(36);
+		@include margin-all(0,0,16,0);
+
+    span {
+      font-size: 0.8em;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+  }
+}
+
+/* Buttons */
+.Actions button.center {
+	display: block;
+}
+
+.button,
+button {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+
+	background-color: $bhr-pink;
+	color: #FFFFFF;
+    border: none;
+    @include font-size(14);
+    @include line-height(18);
+	@include margin-all(10,0,10,0);
+    @include padding-all(12,20,12,20);
+    cursor: pointer;
+
+	text-transform: uppercase;
+	font-weight: bold;
+	letter-spacing: 0.1em;
+	text-align: center;
+	text-decoration: none;
+	outline: none;
+
+	&.block {
+		display: block;
+	}
+
+	&.black-button {
+		background-color: $bhr-black;
+		color: #FFFFFF;
+	}
+
+	&.grey-button {
+		background-color: #656565;
+		color: #FFFFFF;
+	}
+
+	&.disabled {
+		background-color: #bcbcbc;
+		cursor: default;
+
+		&:hover,
+		&:focus {
+			background-color: #bcbcbc;
+		}
+	}
+
+	&.right {
+		float: right;
+	}
+}
+.button:hover,
+button:hover,
+.button:focus,
+button:focus {
+	background-color: $bhr-pink;
+	color: #fff;
+    text-decoration: none;
+}
+.button.black,
+button.black {
+	background: $bhr-black;
+    color: #FFFFFF;
+
+	&:hover,
+	&:focus {
+		background-color: $bhr-pink;
+	    color: #fff;
+	    text-decoration: none;
+	}
+}
+.button.large,
+button.large {
+	@include font-size(16);
+    @include line-height(20);
+	@include margin-all(20,0,20,0);
+    @include padding-all(20,60,20,60);
+	min-width: 220px;
+}
+.button.center,
+button.center {
+	float: none;
+    margin: 20px auto;
+	margin: 1.25rem auto;
+}
+.button.loading,
+button.loading {
+	@include padding-all(20,0,20,0);
+	text-indent: 100%;
+	overflow: hidden;
+	white-space: nowrap;
+	width: 120px;
+	position: relative;
+}
+
+.full {
+    width: 100%;
+    float: left;
+    text-align: center;
+    margin: 5px 0 10px;
+}
+p.full {
+    margin: 0;
+    letter-spacing: 2px;
+}
+.grey {
+    color: #999;
+}
+.small {
+    font-size: 80%;
+}
+
+/* repeating styles */
+
+.pink {
+   color: $bhr-pink;
+   font-weight: 700;
+}
+
+p.pink-bg,
+.main-content p.pink-bg {
+   background: $bhr-pink;
+   color: #fff;
+   @include padding-all(8,16,8,16);
+   @include font-size(14);
+   @include line-height(18);
+   text-align: center;
+   width: 100%;
+   font-weight: 700;
+   letter-spacing: 1px;
+   margin: 10px 0;
+}
+
+.uppercase {
+   text-transform: uppercase;
+}
+
+.text-center {
+  text-align: center;
+}
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+
+@media only screen and (min-width: 40.0625em) {
+
+  .no-pad-left {
+      padding-left: 0;
+  }
+  .no-pad-right {
+      padding-right: 0;
+  }
+  .no-pad {
+      padding: 0;
+  }
+
+}

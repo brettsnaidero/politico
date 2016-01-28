@@ -1,0 +1,50 @@
+@media print {
+
+    /* Header Things */
+    header .logo {
+        background: none;
+    }
+
+    header .logo img {
+        display: block;
+        margin: 0 auto;
+    }
+
+    header .header-options,
+    header nav {
+        display: none;
+    }
+
+    .search-bar,
+    .search-history {
+        display: none;
+    }
+
+    /* Banner */
+    .page-banner .hb-image .push {
+        padding: 0;
+    }
+
+    .page-banner .hb-image h1 {
+        color: #000000;
+        text-align: left;
+    }
+
+    /* Links - Insert URL After */
+    .content a:link:after,
+    .content a:visited:after {
+        content:" [" attr(href) "] ";
+        font-size: 11px;
+        text-transform: none;
+        font-weight: normal;
+        letter-spacing: 0;
+    }
+
+    /* Footer */
+    .above-footer,
+    .footer-newsletter,
+    footer {
+        display: none;
+    }
+
+}
