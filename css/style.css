@@ -1988,6 +1988,34 @@ select[multiple] {
   font-style: normal;
 }
 
+.page-left {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 50%;
+  bottom: 0;
+  height: 100vh;
+  background: #FFFFFF;
+}
+
+@media screen and (max-height: 32em) {
+  .page-left {
+    position: static;
+    width: auto;
+    height: auto;
+    overflow: auto;
+  }
+}
+
+@media screen and (max-width: 64.063em) {
+  .page-left {
+    position: static;
+    width: auto;
+    height: auto;
+    overflow: auto;
+  }
+}
+
 .page-right {
   position: fixed;
   top: 0;
@@ -1999,6 +2027,15 @@ select[multiple] {
   background: #5F8496;
 }
 
+@media screen and (max-height: 32em) {
+  .page-right {
+    position: static;
+    width: auto;
+    height: auto;
+    overflow: auto;
+  }
+}
+
 @media screen and (max-width: 64.063em) {
   .page-right {
     position: static;
@@ -2006,6 +2043,20 @@ select[multiple] {
     height: auto;
     overflow: auto;
   }
+}
+
+.page-right::-webkit-scrollbar {
+  width: 12px;
+}
+
+.page-right::-webkit-scrollbar-track {
+  background: #ACBCC3;
+}
+
+.page-right::-webkit-scrollbar-thumb {
+  background-color: #FFFFFF;
+  border: 1px solid #ACBCC3;
+  border-radius: 5px;
 }
 
 /* Body */
@@ -2154,7 +2205,8 @@ img.floatleft,
 }
 
 .politicians {
-  background: #5F8496;
+  background: #BECDD4;
+  padding: 5%;
 }
 
 .container {
@@ -2164,24 +2216,18 @@ img.floatleft,
 .mix {
   display: none;
   text-align: center;
-  width: 18%;
+  width: 23%;
   margin: 1em 1%;
-  background-color: #ccc;
+  background-color: #FFFFFF;
   font-size: 16px;
 }
 
 .houseofreps {
-  background-color: blue;
-  color: white;
+  color: red;
 }
 
 .senate {
-  background-color: orange;
-}
-
-.red {
-  background-color: red;
-  color: white;
+  color: orange;
 }
 
 .controls button {
@@ -2194,14 +2240,84 @@ img.floatleft,
 
 .controls button.active {
   background: blue;
+  color: #FFFFFF;
 }
 
-input {
-  padding: .5em;
+.home-menu {
+  height: 100vh;
 }
 
-.title {
-  font-weight: 2em;
+@supports (display: flex) {
+  .home-menu {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+  }
+}
+
+.home-menu .introduction {
+  background: #EFEFEF;
+  margin: 30px;
+  margin: 1.875rem;
+  margin-bottom: 0;
+  padding: 30px;
+  padding: 1.875rem;
+  width: 100%;
+}
+
+.home-menu .menu {
+  margin: 15px;
+  margin: 0.9375rem;
+  width: 100%;
+}
+
+@supports (display: flex) {
+  .home-menu .menu {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+  }
+}
+
+.home-menu .menu a {
+  display: block;
+  width: calc(50% - 30px);
+  min-height: 220px;
+  background: #EFEFEF;
+  color: #FFFFFF;
+  float: left;
+  margin: 15px;
+  margin: 0.9375rem;
+  position: relative;
+}
+
+@supports (display: flex) {
+  .home-menu .menu a {
+    float: none;
+  }
+}
+
+.home-menu .menu a .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, rgba(0, 160, 161, 0.9) 0%, rgba(101, 194, 92, 0.9) 100%);
+}
+
+.home-menu .menu a .title {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  right: 15px;
+  font-size: 20px;
 }
 
 /* Content */

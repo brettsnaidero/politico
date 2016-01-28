@@ -3,7 +3,8 @@
 }
 
 .politicians {
-    background: #5F8496;
+    background: #BECDD4;
+    padding: 5%;
 }
 
 .container {
@@ -13,24 +14,18 @@
 .mix {
   display: none;
   text-align: center;
-  width: 18%;
+  width: 23%;
   margin: 1em 1%;
-  background-color: #ccc;
+  background-color: #FFFFFF;
   font-size: 16px;
 }
 
 .houseofreps {
-  background-color: blue;
-  color: white;
+  color: red;
 }
 
 .senate {
-  background-color: orange;
-}
-
-.red {
-  background-color: red;
-  color: white;
+  color: orange;
 }
 
 .controls button {
@@ -43,12 +38,5 @@
 
 .controls button.active {
     background: blue;
-}
-
-input {
-  padding: .5em;
-}
-
-.title {
-  font-weight: 2em;
+    color: #FFFFFF;
 }

@@ -1,3 +1,31 @@
+.page-left {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 50%;
+	bottom: 0;
+	height: 100vh;
+	background: #FFFFFF;
+}
+
+@media screen and (max-height: 32em) {
+	.page-left {
+		position: static;
+		width: auto;
+		height: auto;
+		overflow: auto;
+	}
+}
+
+@media screen and (max-width: 64.063em) {
+	.page-left {
+		position: static;
+		width: auto;
+		height: auto;
+		overflow: auto;
+	}
+}
+
 .page-right {
 	position: fixed;
 	top: 0;
@@ -9,6 +37,15 @@
 	background: #5F8496;
 }
 
+@media screen and (max-height: 32em) {
+	.page-right {
+		position: static;
+		width: auto;
+		height: auto;
+		overflow: auto;
+	}
+}
+
 @media screen and (max-width: 64.063em) {
 	.page-right {
 		position: static;
@@ -16,6 +53,20 @@
 		height: auto;
 		overflow: auto;
 	}
+}
+
+.page-right::-webkit-scrollbar {
+    width: 12px;
+}
+
+.page-right::-webkit-scrollbar-track {
+	background: #ACBCC3;
+}
+
+.page-right::-webkit-scrollbar-thumb {
+  background-color: #FFFFFF;
+  border: 1px solid #ACBCC3;
+  border-radius: 5px;
 }
 
 /* Body */

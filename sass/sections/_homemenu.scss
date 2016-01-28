@@ -1,0 +1,60 @@
+.home-menu {
+    height: 100vh;
+
+    @supports (display: flex) {
+		display: flex;
+		flex-wrap: wrap;
+	}
+}
+
+.home-menu .introduction {
+    background: #EFEFEF;
+    @include margin(30);
+    margin-bottom: 0;
+    @include padding(30);
+    width: 100%;
+}
+
+.home-menu .menu {
+    @include margin(15);
+    width: 100%;
+
+    @supports (display: flex) {
+		display: flex;
+		flex-wrap: wrap;
+	}
+}
+
+.home-menu .menu a {
+    display: block;
+    width: calc(50% - 30px);
+    min-height: 220px;
+    background: #EFEFEF;
+    color: #FFFFFF;
+    float: left;
+    @include margin(15);
+    position: relative;
+
+    @supports (display: flex) {
+		float: none;
+	}
+}
+
+.home-menu .menu a .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: -moz-linear-gradient(top, rgba(0, 160, 161, 0.9) 0%, rgba(101, 194, 92, 0.9) 100%);
+    background: -webkit-linear-gradient(top, rgba(0, 160, 161, 0.9) 0%, rgba(101, 194, 92, 0.9) 100%);
+    background: linear-gradient(to bottom, rgba(0, 160, 161, 0.9) 0%, rgba(101, 194, 92, 0.9) 100%);
+}
+
+.home-menu .menu a .title {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    right: 15px;
+    font-size: 20px;
+}
