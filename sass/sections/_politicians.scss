@@ -3,8 +3,15 @@
 }
 
 .politicians {
-    background: #BECDD4;
     padding: 5%;
+}
+
+.politicians input[type="text"] {
+    border: none;
+    background: #FFFFFF;
+    box-shadow: none;
+    @include font-size(14);
+    @include padding(6);
 }
 
 .container {
@@ -12,12 +19,12 @@
 }
 
 .mix {
-  display: none;
-  text-align: center;
-  width: 23%;
-  margin: 1em 1%;
-  background-color: #FFFFFF;
-  font-size: 16px;
+    display: none;
+    text-align: center;
+    width: 23%;
+    margin: 1em 1%;
+    background-color: #FFFFFF;
+    font-size: 16px;
 }
 
 .houseofreps {
@@ -32,8 +39,11 @@
     background: #FFFFFF;
     border: none;
     color: #000000;
-    padding: .65em;
-    border-radius: 5px;
+    display: block;
+
+    @include font-size(14);
+    @include padding(6);
+    @include margin-all(0,0,0,0);
 }
 
 .controls button.active {

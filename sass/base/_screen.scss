@@ -1,11 +1,11 @@
 .page-left {
 	position: fixed;
-	top: 0;
+	top: 80px;
 	left: 0;
 	width: 50%;
 	bottom: 0;
-	height: 100vh;
-	background: #FFFFFF;
+	height: calc(100vh - 80px);
+	background: #E9EDEE;
 }
 
 @media screen and (max-height: 32em) {
@@ -28,11 +28,11 @@
 
 .page-right {
 	position: fixed;
-	top: 0;
+	top: 80px;
 	right: 0;
 	width: 50%;
 	bottom: 0;
-	height: 100vh;
+	height: calc(100vh - 80px);
 	overflow-y: scroll;
 	background: #5F8496;
 }
